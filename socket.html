@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js'></script>
+    <script type='text/javascript'>
+        var socket = io('http://localhost:3000', { path: '/socket.io' }); // connect to server
+        socket.on('fromServer', function (data) { // listen for fromServer message
+                console.log('Message from server: ' + data.id);
+                socket.emit('fromClient', { id: 'Hi There' }); // send fromClient message to server
+            });
+        socket.on('fromServer2', function (data) { // listen for fromServer message
+                console.log('Message from server: ' + data.id);
+                socket.emit('fromClient2', { id: 'Great!' }); // send fromClient message to server
+            });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Comp 584 Project#1 Socket.io Server and client communication
+        </h1>
+    </div>
+</body>
+</html>

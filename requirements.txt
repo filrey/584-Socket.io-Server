@@ -1,0 +1,8 @@
+Here are the requirements:
+
+1. Spin up a Socket.io server on port 3000 on your local host
+2. When a browser connects to the Socket server running on port 3000 on the local host, the server should write "Client connected" to its console send some kind of "Hello" message to the browser. This can literally be a message saying "Hello".
+3. Upon receiving the "Hello" message, the browser script should send some kind of message back to the server (it can even be something saying "Hi there").
+4. Upon receiving the "Hi there" message from the browser, the server should send back some kind of "How are you?" message.
+5. Upon receiving the "How are you?" message, the browser should respond back with "Great" or something like that.
+6. Upon the browser disconnecting from the server (i.e. closing the window), the server should write "Client disconnected" in its console.
